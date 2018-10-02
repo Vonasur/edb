@@ -1,0 +1,270 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+    color: #666
+    opacity: 1
+
+*:-moz-placeholder
+    color: #666
+    opacity: 1
+
+*::-moz-placeholder
+    color: #666
+    opacity: 1
+
+*:-ms-input-placeholder
+    color: #666
+    opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: #666
+body input:required:valid,
+body textarea:required:valid
+    color: #666
+
+html, body
+    height: 100%
+
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.75
+    font-family: $default-font
+    overflow-x: hidden
+    opacity: 1
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.text-center
+    text-align: center
+
+h1,
+h2
+    font-family: $aleo
+    color: $blue
+    font-weight: bold
+
+h1
+    font-size: 36px
+    margin-bottom: 16px
+
+a
+    text-decoration: none
+    &:hover
+        text-decoration: none
+
+p
+    font-size: 18px
+    font-family: 'opensans', sans-serif
+    line-height: 24px
+
+// Header
+header
+    color: $blue
+    padding-bottom: 12px
+    border-bottom: 1px solid $purple
+    .fa
+        color: $purple
+        font-size: 32px
+        margin-right: 7px
+        transition: all 0.3s ease-out
+        &:hover
+            color: $blue
+            -webkit-transform: scale(1.2)
+            -moz-transform: scale(1.2)
+            -o-transform: scale(1.2)
+            -webkit-transition: all 0.5s ease-out
+            transition: all 0.5s ease-out
+            -webkit-transition-duration: 0.5s
+            -moz-transition-duration: 0.5s
+            -o-transition-duration: 0.5s
+            -ms-transition-duration: 0.5s
+
+.logo
+    padding-top: 1em
+
+.contacts
+    float: right
+    padding-top: 1em
+    font-size: 30px
+    font-family: $aleo
+    font-weight: bold
+
+
+
+// Navigation
+
+.topmenu
+    padding: 0
+    margin: -50px 0 0 320px
+    list-style: none
+    li
+        padding: 0 15px
+        margin: 0 10px
+        display: inline-block
+        >a
+            padding: 10px 0 0
+            display: block
+            font-family: $nissan-ag
+            font-size: 18px
+            text-transform: uppercase
+            color: #000
+            &.active,
+            &:hover
+                border-bottom: 5px solid $blue
+    
+    
+.topmenu .sub-menu
+    position: absolute
+    margin: 0
+    padding: 0
+    list-style: none
+    background: $purple
+    width: 100%
+    left: 0
+    border-radius: 0 0 6px 6px
+
+.submenu
+    background:url(../img/dropdown.png) no-repeat
+    background-position: 105px 22px
+    &:hover
+        background-color: $purple
+        border-radius: 6px 6px 0 0
+        padding-bottom: 10px
+        >a
+            color: #FFF !important
+            &:hover
+                border-bottom: none !important
+
+    .sub-menu
+        display: none
+        text-align: center
+        z-index: 999
+        a
+            color: #FFF
+            text-transform: none
+            font-size: 16px
+            padding-bottom: 12px
+            transition: all 0.3s ease-out
+            &:hover
+                border-bottom: none
+                color: $blue
+
+.topmenu > li:hover .sub-menu
+    display: block
+    margin-top: 9px
+
+// Slider
+.slick-dots
+    bottom: 25px
+    li
+        button
+            background-color: $purple
+            border-radius: 50%
+            opacity: 0.4
+            transition: all 0.3s ease-out
+            width: 16px
+            height: 16px
+            &:hover
+                opacity: 1
+li.slick-active
+    button
+        opacity: 1
+.slick-dots li button:before
+    content: ''
+
+// Intro text
+.intro
+    margin-bottom: 2em
+
+// Advantages
+
+.advantage-img
+    width: 110px
+    height: 110px
+    margin: 10px auto
+
+.advantages
+    h2
+        font-size: 22px
+        line-height: 24px
+        height: 44px
+
+//Problrms
+.problems
+    background-color: $purple
+    background-image: url(../img/texture2.png)
+    color: #FFF
+    .container, .fw-container
+        background-color: $purple
+        padding-bottom: 2em
+    p
+        font-size: 18px
+        line-height: 36px
+    h2
+        color: #FFF
+        font-size: 36px
+
+.problem-img
+    border-radius: 50%
+    border: 4px solid #FFF
+
+.contact-us
+    width: 250px
+    height: 55px
+    background-color: $blue
+    margin: 10px auto
+    font-family: $nissan-ag
+    text-transform: uppercase
+    font-size: 24px
+    border: 1px solid #0e6785
+    transition: all 0.5s ease-out
+    &:hover
+        background-color: darken($blue, 10%)
+
+// Maintext
+.maintext
+    padding: 25px 0
+.img-right
+    border-radius: 50%
+    border: 4px solid $purple
+    float: right
+    margin: 10px 0 10px 10px
+
+//Bottom menu
+
+.bottommenu
+    padding: 14px 0 20px
+    margin: 0
+    list-style: none
+    text-align: center
+    width: 100%
+    background-color: $blue
+    li
+        padding: 0
+        margin: 0 25px
+        display: inline-block
+        a
+            padding: 10px 0 0
+            display: block
+            font-family: $nissan-ag
+            font-size: 18px
+            color: #FFF
+            transition: all 0.3s ease-out
+            &:hover
+                color: $purple
+
+// Footer
+footer
+    padding: 14px 0
+
+
+
+@import "media" // Always in the end
